@@ -26,7 +26,10 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
     "awesome-typescript-loader": "^5.2.1",
+    "clsx": "^1.0.4",
     "css-loader": "^3.2.0",
     "nwb": "0.23.x",
     "react": "^16.9.0",
