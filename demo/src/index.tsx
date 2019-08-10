@@ -1,11 +1,10 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {render} from 'react-dom'
+import Core from "./Core";
 
-class Demo extends Component {
+class Demo extends React.Component {
   render() {
-    return <div>
-      <h1>hornbill-components Demo</h1>
-    </div>
+    return <Core/>
   }
 }
 

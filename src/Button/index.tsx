@@ -6,11 +6,12 @@ import {Intent} from "../globals/global";
 interface Props {
     intent: Intent
     children: string | React.Component
+    icon?: React.Component
 }
 
 export default class Button extends React.Component<Props, {}>{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const {children, intent} = this.props;
+        const {children, intent, icon} = this.props;
         // @ts-ignore
         let bntIntent: string
         if (intent === "danger") {
@@ -49,8 +50,9 @@ export default class Button extends React.Component<Props, {}>{
                     {bntIntent: true},
                     {'waves-effect': true},
                     {'waves-light': true}
-                    )}
-            >{children}</button>
+                    )
+            }
+            >{icon !== undefined ? icon: ''}{children}</button>
         )
     }
 }
