@@ -2,6 +2,8 @@ import React from 'react'
 import '../../assets/css/page.min.css'
 import '../../assets/css/style.css'
 import Nav from "../../Components/Navigation/Nav";
+import {Intent} from "../../../../src/globals/global";
+import {Button} from "../../../../src";
 
 export default class Home extends React.Component{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -39,7 +41,6 @@ export default class Home extends React.Component{
 
                     <section className="section py-9">
                         <div className="container">
-
                             <div className="row gap-y text-center">
 
                                 <div className="col-md-4">
@@ -79,6 +80,7 @@ export default class Home extends React.Component{
                     </section>
 
 
+                    <Button intent={Intent.PRIMARY}>Some</Button>
 
 
                     <section className="section bg-gray">
