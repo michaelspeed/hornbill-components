@@ -1,5 +1,5 @@
 import React from 'react'
-import './button.css'
+import './RoundedButton.css'
 import clsx from 'clsx'
 import {Intent} from "../globals/global";
 
@@ -9,53 +9,49 @@ interface Props {
     icon?: React.Component
 }
 
-class Button extends React.Component<Props, {}>{
+export class RoundedButton extends React.Component<Props, {}>{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const {children, intent, icon} = this.props;
-        const bntIntent: string = this.getIntentProps(intent)
-        return (
-            <button className={
-                clsx({
-                    'hb-btn': true,
-                    'waves-effect': true,
-                    'waves-light': true,
-                }, bntIntent)
-            }
-            >{icon !== undefined ? icon: ''}{children}</button>
-        )
-    }
-
-    getIntentProps(intent): string {
+        // @ts-ignore
+        let bntIntent: string
         if (intent === "danger") {
             {
-                return 'hb-btn-danger'
+                bntIntent = 'btn-danger'
             }
         } else if (intent === "info") {
             {
-                return 'hb-btn-info'
+                bntIntent = 'btn-info'
             }
         } else if (intent === "none") {
             {
-                return ''
+                bntIntent = ''
             }
         } else if (intent === "primary") {
             {
-                return 'hb-btn-primary'
+                bntIntent = 'btn-primary'
             }
         } else if (intent === "success") {
             {
-                return 'hb-btn-success'
+                bntIntent = 'btn-success'
             }
         } else if (intent === "warning") {
             {
-                return 'hb-btn-warning'
+                bntIntent = 'btn-warning'
             }
         } else {
             {
-                return ''
+                bntIntent = ''
             }
         }
+        return (
+            <button
+                className={clsx({
+                    'btn': true,
+                    'btn-round': true,
+                    bntIntent: true,
+                    'waves-effect waves-light': true
+                })}
+            >{icon !== undefined ? icon: ''}{children}</button>
+        )
     }
 }
-
-export default Button;
