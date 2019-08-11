@@ -2,7 +2,12 @@ module.exports = {
   type: 'react-component',
   npm: {
     esModules: true,
-    umd: false
+    umd: {
+      global: 'hornbill-Components',
+      externals: {
+        'react-responsive-modal': 'Modal'
+      }
+    }
   },
   webpack: {
     config(config) {
