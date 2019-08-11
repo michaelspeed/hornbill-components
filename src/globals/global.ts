@@ -10,3 +10,11 @@ export const Intent = {
 };
 
 export type Intent = typeof Intent[keyof typeof Intent]
+
+export const ButtonSize = {
+    LARGE: "large" as "large",
+    SMALL: "small" as "small",
+    EXTRASMALL: "extrasmall" as "extrasmall"
+}
+
+export type ButtonSize = typeof ButtonSize[keyof  typeof ButtonSize]

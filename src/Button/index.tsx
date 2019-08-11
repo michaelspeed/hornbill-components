@@ -3,26 +3,47 @@ import './button.css'
 import clsx from 'clsx'
 import {Intent} from "../globals/global";
 
-interface Props {
+export interface ComponentProps {
     intent: Intent
-    children: string | React.Component
+    children: any
     icon?: React.Component
+    size?: string
+    dashed?: boolean
+    skew?: boolean
 }
 
-class Button extends React.Component<Props, {}>{
+type HButtonProps = ComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+
+class Button extends React.Component<HButtonProps, {}>{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const {children, intent, icon} = this.props;
-        const bntIntent: string = this.getIntentProps(intent)
+        const {children, intent, icon, size, dashed, skew, ...restProps} = this.props;
+        const bntIntent: string = this.getIntentProps(intent);
+        const bntSizes: string = this.getButtonSizes(size);
         return (
             <button className={
                 clsx({
                     'hb-btn': true,
                     'waves-effect': true,
                     'waves-light': true,
-                }, bntIntent)
+                    'hb-btn-outline-dashed': dashed,
+                    'btn-skew': skew
+                }, bntIntent, bntSizes)
             }
+                    {...restProps}
             >{icon !== undefined ? icon: ''}{children}</button>
         )
+    }
+
+    getButtonSizes(size): string {
+        if (size === "large") {
+            return 'hb-btn-xl'
+        } else if (size === "small") {
+            return 'hb-btn-sm'
+        } else if (size === "extrasmall") {
+            return 'hb-btn-xs'
+        } else {
+            return ''
+        }
     }
 
     getIntentProps(intent): string {
