@@ -1,0 +1,7 @@
+@import "../globals/bootstrap.min.css";
+@import "../globals/style.css";
+
+
+.lead {
+    font-size: 18px
+}
