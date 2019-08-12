@@ -4,9 +4,9 @@ import clsx from 'clsx'
 import {Intent} from "../globals/global";
 
 export interface ComponentProps {
-    intent: Intent
-    title: "Alert!"
-    message: "Oh snap! Change a few things up and try submitting again."
+    intent?: Intent
+    title?: "Alert!"
+    message?: "Oh snap! Change a few things up and try submitting again."
 }
 
 export type HAlertProps = ComponentProps & React.HTMLAttributes<HTMLDivElement>
