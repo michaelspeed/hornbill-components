@@ -3,7 +3,7 @@ import '../../assets/css/page.min.css'
 import '../../assets/css/style.css'
 import Nav from "../../Components/Navigation/Nav";
 import {Intent} from "../../../../src/globals/global";
-import {Button, Jumbotron, Tab, Accordance} from "../../../../src";
+import {Button, Jumbotron, Tab, Accordance, ProgressBar} from "../../../../src";
 
 export default class Home extends React.Component{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -85,6 +85,7 @@ export default class Home extends React.Component{
                     <Jumbotron/>
                     <Tab/>
                     <Accordance/>
+                    <ProgressBar/>
 
 
                     <section className="section bg-gray">
