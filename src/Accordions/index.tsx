@@ -25,17 +25,17 @@ export default class Accordance extends React.Component<Props, {}>{
                 <div className="tab-content">
                     <div className="tab-pane active p-3" id="home-1" role="tabpanel">
                         <p className="text-muted mb-0">
-                            Home page
+                            Home page table 
                         </p>
                     </div>
                     <div className="tab-pane p-3" id="profile-1" role="tabpanel">
                         <p className="text-muted mb-0">
-                            profile page
+                            profile page table 
                         </p>
                     </div>
                     <div className="tab-pane p-3" id="settings-1" role="tabpanel">
                         <p className="text-muted mb-0">
-                            settings page
+                            settings page table
                         </p>
                     </div>
                 </div>
