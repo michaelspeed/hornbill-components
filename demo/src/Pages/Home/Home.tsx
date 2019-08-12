@@ -79,14 +79,13 @@ export default class Home extends React.Component{
                         </div>
                     </section>
 
-
                     <Button intent={Intent.PRIMARY}>Some</Button>
 
                     <Jumbotron/>
                     <Tab/>
                     <Accordance/>
                     <ProgressBar/>
-
+                    
 
                     <section className="section bg-gray">
                         <div className="container">

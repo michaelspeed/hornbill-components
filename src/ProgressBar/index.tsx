@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Intent } from '../globals/global';
 
 export interface ComponentProps{
-    intent: Intent
+    intent?: Intent
     strip?: boolean
 }
 
