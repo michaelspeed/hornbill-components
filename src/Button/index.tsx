@@ -71,11 +71,10 @@ class Button extends React.Component<HButtonProps, {}>{
             {
                 return 'hb-btn-warning'
             }
-        } else {
+        } else 
             {
                 return ''
             }
-        }
     }
 }
 
