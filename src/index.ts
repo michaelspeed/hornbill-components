@@ -4,6 +4,8 @@ import Jumbotron from './Jumbotron/index';
 import Tab from './Tab/index';
 import Accordance from './Accordions/index';
 import ProgressBar from './ProgressBar/index';
+import {Intent} from './globals/global'
+import Alert from './Alert'
 
 // Default Exports
 export {
@@ -11,6 +13,8 @@ export {
     Panel,
     Jumbotron,
     Tab,
-    Accordance, 
-    ProgressBar
+    Accordance,
+    ProgressBar,
+    Intent,
+    Alert
 }
