@@ -5,7 +5,8 @@ module.exports = {
     umd: {
       global: 'hornbill-Components',
       externals: {
-        'react-responsive-modal': 'Modal'
+        'react-responsive-modal': 'Modal',
+        'ui-box': 'ui-box'
       }
     }
   },
