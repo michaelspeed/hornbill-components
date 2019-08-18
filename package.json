@@ -22,7 +22,9 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react-responsive-modal": "^4.0.1"
+    "react-responsive-modal": "^4.0.1",
+    "react-transition-group": "^4.2.2",
+    "ui-box": "^2.1.0"
   },
   "peerDependencies": {
     "react": "16.x"
