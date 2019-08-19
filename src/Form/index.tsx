@@ -12,12 +12,7 @@ export interface ComponentProps {
 type HFormProps = ComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 class Form extends React.Component<HFormProps, {}>{
-    constructor(props){
-        super(props);
-        this.state={
-            message:""
-        }
-    }
+   
     getBorderStye = () => {
         if(this.props.borderResult === 'success'){
             return 'has-success';

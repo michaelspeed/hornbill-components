@@ -1,0 +1,186 @@
+@import '../globals/bootstrap.min.css';
+@import '../globals/style.css';
+
+.footable-filtering-external ul.dropdown-menu > li > a.custom-control input[type=checkbox], table.footable > thead > tr.footable-filtering > th ul.dropdown-menu > li > a.custom-control input[type=checkbox] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 5px
+}
+
+.footable-filtering-external ul.dropdown-menu > li > a.custom-control > label, table.footable > thead > tr.footable-filtering > th ul.dropdown-menu > li > a.custom-control > label {
+    display: block;
+    padding-left: 30px
+}
+
+.custom-control-label {
+    padding-top: 2px
+}
+
+.custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #4d79f6
+}
+
+.custom-control-input:focus ~ .custom-control-indicator {
+    -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 3px #4d79f6;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #4d79f6
+}
+
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    border-color: #fff
+}
+
+.radio .custom-control-label::after {
+    position: absolute;
+    top: 7px
+}
+
+.custom-switch.switch-primary .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #4d79f6;
+    background-color: #4d79f6
+}
+
+.custom-switch.switch-primary .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(77, 121, 246, .25);
+    box-shadow: 0 0 0 .11px rgba(77, 121, 246, .25)
+}
+
+.custom-switch.switch-primary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-secondary .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #4ac7ec;
+    background-color: #4ac7ec
+}
+
+.custom-switch.switch-secondary .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(74, 199, 236, .25);
+    box-shadow: 0 0 0 .11px rgba(74, 199, 236, .25)
+}
+
+.custom-switch.switch-secondary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-success .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #1ecab8;
+    background-color: #1ecab8
+}
+
+.custom-switch.switch-success .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(30, 202, 184, .25);
+    box-shadow: 0 0 0 .11px rgba(30, 202, 184, .25)
+}
+
+.custom-switch.switch-success .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-warning .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #f3c74d;
+    background-color: #f3c74d
+}
+
+.custom-switch.switch-warning .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(243, 199, 77, .25);
+    box-shadow: 0 0 0 .11px rgba(243, 199, 77, .25)
+}
+
+.custom-switch.switch-warning .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-info .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #9ba7ca;
+    background-color: #9ba7ca
+}
+
+.custom-switch.switch-info .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(155, 167, 202, .25);
+    box-shadow: 0 0 0 .11px rgba(155, 167, 202, .25)
+}
+
+.custom-switch.switch-info .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-danger .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #f1646c;
+    background-color: #f1646c
+}
+
+.custom-switch.switch-danger .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(241, 100, 108, .25);
+    box-shadow: 0 0 0 .11px rgba(241, 100, 108, .25)
+}
+
+.custom-switch.switch-danger .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-dark .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #2f4686;
+    background-color: #2f4686
+}
+
+.custom-switch.switch-dark .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(47, 70, 134, .25);
+    box-shadow: 0 0 0 .11px rgba(47, 70, 134, .25)
+}
+
+.custom-switch.switch-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-purple .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #7551e9;
+    background-color: #7551e9
+}
+
+.custom-switch.switch-purple .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(117, 81, 233, .25);
+    box-shadow: 0 0 0 .11px rgba(117, 81, 233, .25)
+}
+
+.custom-switch.switch-purple .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-pink .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ff5da0;
+    background-color: #ff5da0
+}
+
+.custom-switch.switch-pink .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(255, 93, 160, .25);
+    box-shadow: 0 0 0 .11px rgba(255, 93, 160, .25)
+}
+
+.custom-switch.switch-pink .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
+
+.custom-switch.switch-blue .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #2b55cc;
+    background-color: #2b55cc
+}
+
+.custom-switch.switch-blue .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: 0 0 0 .11px rgba(43, 85, 204, .25);
+    box-shadow: 0 0 0 .11px rgba(43, 85, 204, .25)
+}
+
+.custom-switch.switch-blue .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(137, 151, 189, .7)
+}
