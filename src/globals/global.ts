@@ -18,3 +18,19 @@ export const ButtonSize = {
 }
 
 export type ButtonSize = typeof ButtonSize[keyof  typeof ButtonSize]
+
+// export const SpinnerType = {
+//     "text-primary" : "primary" as "primary",
+//     "text-blue" :    "blueText" as "blueText",
+//     "text-secondary" : "secondary" as "secondary",
+//     "text-success" : "success" as "success",
+//     "text-danger" : "danger" as "danger",
+//     "text-warning" : "warning" as "warning",
+//     "text-info" : "info"
+//     "text-pink" : 
+//     "text-purple" : 
+//     "text-light" : 
+//     "text-dark" : 
+// }
+
+// export type SpinnerType = typeof SpinnerType[keyof typeof SpinnerType]

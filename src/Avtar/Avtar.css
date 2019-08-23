@@ -1,56 +1,18 @@
-@import "../globals/bootstrap.min.css";
-@import "../globals/style.css";
-
-.hb-text-primary {
-    color: #4d79f6 !important
+.hb-thumb-md {
+    height: 48px;
+    width: 48px;
+    font-size: 14px;
+    font-weight: 700
 }
 
-.hb-text-secondary {
-    color: #4ac7ec !important
-}
-
-.hb-text-warning {
-    color: #f3c74d !important
-}
-
-.hb-text-blue {
-    color: #2b55cc !important
-}
-
-.hb-text-success {
-    color: #1ecab8 !important
-}
-
-.hb-text-info {
-    color: #9ba7ca !important
-}
-
-.hb-text-pink {
-    color: #ff5da0 !important
-}
-
-.hb-text-purple {
-    color: #7551e9 !important
-}
-
-.hb-text-light {
-    color: #f1f5fa !important
-}
-
-.hb-text-dark {
-    color: #2f4686 !important
-}
-
-
-
-.thumb-xxs {
+.hb-thumb-xxs {
     height: 24px !important;
     width: 24px !important;
     font-size: 10px;
     font-weight: 700
 }
 
-.thumb-xs {
+.hb-thumb-xs {
     height: 32px !important;
     width: 32px !important;
     font-size: 10px;

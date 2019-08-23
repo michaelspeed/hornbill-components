@@ -1,46 +1,84 @@
-// import React from 'react'
-// import './spinner.css'
-// import clsx from 'clsx'
-// import {Intent} from "../globals/global";
+import React from 'react';
+import './spinner.css';
+import clsx from 'clsx'
 
-// interface Props {
-//     intent: Intent
-// }
+export interface ComponentProps{
+    sippnerType:string
+    spinnerBorderType:string
+    spinnerSize: string
+};
 
+type HSpinnerProps = ComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 
-// class Spinner extends React.Component<Props, {}>{
-//     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined 
-//     {
-//         const {intent} = this.props;
-//         const bntIntent: string = this.getIntentProps(intent)
-//         return (
-//             <div className={
-//                 clsx({
-//                     'alert' : true,
-//                 //"alert alert-secondary border-0"
-//                 },bntIntent)}
-//                  >
-//             </div>  
-//         )
-//     }
+export default class Spinner extends React.Component<HSpinnerProps, {}>{
 
-//     getIntentProps(intent): string {
-//         if (intent === "info"){
-//             return 'hb-alert-info'
-//         }
+    getTextSpinner = () => {
+        if (this.props.sippnerType === 'primary'){
+            return 'hb-text-primary'
+        }
+        else if (this.props.sippnerType === 'secondary'){
+            return 'hb-text-secondary'
+        }
+        else if (this.props.sippnerType === 'success'){
+            return 'hb-text-success'
+        }
+        else if (this.props.sippnerType === 'danger'){
+            return 'hb-text-danger'
+        }
+        else if (this.props.sippnerType === 'warning'){
+            return 'hb-text-warning'
+        }
+        else if (this.props.sippnerType === 'info'){
+            return 'hb-text-info'
+        }
+        else if (this.props.sippnerType === 'light'){
+            return 'hb-text-light'
+        }
+        else if (this.props.sippnerType === 'dark'){
+            return 'hb-text-dark'
+        }
+    }
 
-//         else if (intent === "light"){
-//             return 'hb-alert-light'
-//         }
+    getSpinnerBorderType = () => {
+        if( this.props.spinnerBorderType === 'border' ){
+            return 'spinner-border';
+        }
+        else if( this.props.spinnerBorderType === 'grow' ){
+            return 'spinner-grow';
+        }
+    }
 
-//         else if (intent === "secondary"){
-//             return 'hb-alert-secondary'
-//         }
+    getSizeOfSpinner = () => {
+        if(this.props.spinnerSize === 'medium'){
+            return 'hb-thumb-md'
+        }
+        else if( this.props.spinnerSize === 'small'){
+            return 'hb-thumb-sm';
+        }
+        else if( this.props.spinnerSize === 'extra-small'){
+            return 'hb-thumb-xs';
+        }
+        else if( this.props.spinnerSize === 'large'){
+            return 'hb-thumb-lg';
+        }
+        else if( this.props.spinnerSize === 'extra-large'){
+            return 'hb-thumb-xl';
+        }
+    }
+    
 
-//         else{
-//             return ''
-//         }
-//     }
-
-// }
-// export default Spinner;
+    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        const spinnerSize: string = this.getSizeOfSpinner();
+        const spinnerBorderType: string = this.getSpinnerBorderType();
+        const textSpinner: string = this.getTextSpinner();
+        return(
+            <div className={
+                clsx(
+                   spinnerSize,
+                   spinnerBorderType,
+                   textSpinner, 
+                )
+            } role="status"></div>
+        );
+    }
+} 
