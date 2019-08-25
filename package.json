@@ -24,6 +24,7 @@
   "dependencies": {
     "react-responsive-modal": "^4.0.1",
     "react-transition-group": "^4.2.2",
+    "styled-components": "^4.3.2",
     "ui-box": "^2.1.0"
   },
   "peerDependencies": {

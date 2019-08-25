@@ -87,6 +87,7 @@ class Overlay extends React.Component<OverlayProps, State>{
     };
 
     containerElement: any;
+    previousActiveElement: any;
 
     constructor(props) {
         super(props);
@@ -136,6 +137,37 @@ class Overlay extends React.Component<OverlayProps, State>{
             }
         })
     };
+
+    bringFocusBackToTarget = () => {
+        return requestAnimationFrame(() => {
+            if (
+                this.containerElement === null ||
+                document.activeElement === null
+            ) {
+                return
+            }
+            const isFocusInsideModal = this.containerElement.contains(
+                document.activeElement
+            );
+
+            if (
+                this.previousActiveElement &&
+                (document.activeElement === document.body || isFocusInsideModal)
+            ) {
+                this.previousActiveElement.focus()
+            }
+        })
+    };
+
+    onEsc = e => {
+        if (e.keyCode === 27 && this.props.onBeforeClose) {
+            this.close()
+        }
+    }
+
+    close = () => {
+
+    }
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
