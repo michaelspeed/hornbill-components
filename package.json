@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.8.5",
+    "@types/styled-components": "^4.1.18",
     "awesome-typescript-loader": "^5.2.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "clsx": "^1.0.4",
