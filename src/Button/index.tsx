@@ -1,6 +1,10 @@
 import React from 'react'
 import './button.css'
 import {ButtonProps} from "./types";
+import {HornBillConsumer, HornBillTheme} from "../Theme";
+import {composeRefs, filterProps} from "./utils";
+import memoize from 'memoize-one';
+import InnerWrapper from "./InnerWrapper";
 
 export type ButtonState = {
     isHover: boolean;
@@ -21,6 +25,8 @@ class Button extends React.Component<ButtonProps, ButtonState>{
     };
 
     button: React.Ref<HTMLButtonElement> = React.createRef<HTMLButtonElement>();
+
+    getComposedRefs = memoize(composeRefs);
 
     constructor(props) {
         super(props);
@@ -92,8 +98,66 @@ class Button extends React.Component<ButtonProps, ButtonState>{
     };
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        const {
+            appearance = 'default',
+            children,
+            className,
+            component: CustomComponent,
+            consumerRef,
+            iconAfter,
+            iconBefore,
+            isDisabled = false,
+            isLoading = false,
+            isSelected = false,
+            shouldFitContainer = false,
+            spacing = 'default',
+            ...rest
+        } = this.props;
+        const attributes = { ...this.state, isSelected, isDisabled };
+        const StyledButton: React.ReactType = CustomComponent || this.getElement()
+
+        const iconIsOnlyChild: boolean = !!(
+            (iconBefore && !iconAfter && !children) ||
+            (iconAfter && !iconBefore && !children)
+        );
+
+        const specifiers = (styles: {}) => {
+            if (StyledButton === 'a') {
+                return {
+                    'a&': styles,
+                };
+            } else if (StyledButton === CustomComponent) {
+                return {
+                    '&, a&, &:hover, &:active, &:focus': styles,
+                };
+            }
+            return styles;
+        };
+
         return (
-            <div></div>
+            <HornBillConsumer>
+                {(theme: HornBillTheme) => {
+                    return (
+                        <StyledButton
+                            {...filterProps(rest, StyledButton)}
+                            ref={this.getComposedRefs(this.button, consumerRef)}
+                            onMouseEnter={this.onMouseEnter}
+                            onMouseLeave={this.onMouseLeave}
+                            onMouseDown={this.onMouseDown}
+                            onMouseUp={this.onMouseUp}
+                            onFocus={this.onFocus}
+                            onBlur={this.onBlur}
+                            disabled={isDisabled}
+                            className={className}
+                            css={specifiers(theme!.button)}
+                        >
+                            <InnerWrapper onClick={this.onInnerClick} fit={!!shouldFitContainer}>
+
+                            </InnerWrapper>
+                        </StyledButton>
+                    )
+                }}
+            </HornBillConsumer>
         )
     }
 }
