@@ -1,1 +1,1 @@
-export {default as buttonClassNames} from './ButtonClassNames'
+export {default as getButtonAppearance} from './ButtonClassNames'

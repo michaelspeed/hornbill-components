@@ -1,6 +1,8 @@
 import {defaultControlStyles} from "../shared";
 import {getPrimaryButtonStylesForIntent, getTextColorForIntent} from "../helper";
 import {scales} from "../foundational-styles";
+import {Themer} from "../../../Themer";
+import memoizeClassName from "../utils/memorizeClassName";
 
 const { disabled } = defaultControlStyles
 
@@ -81,3 +83,5 @@ const ButtonAppearence = (appearance, intent) => {
         }
     }
 }
+
+export default memoizeClassName(ButtonAppearence)
