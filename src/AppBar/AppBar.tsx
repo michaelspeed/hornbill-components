@@ -28,7 +28,7 @@ export default class AppBar extends React.Component<AppBarProps, State>{
         super(props);
         this.state = {
             lastScrollTop: 0,
-            boxShado: -1.6
+            boxShado: -0.8
         }
     }
 
@@ -64,12 +64,13 @@ export default class AppBar extends React.Component<AppBarProps, State>{
 
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        console.log(this.state)
         return (
             <React.Fragment>
                 <header className={clsx({
                     'mdc-top-app-bar': true
                 })} style={{backgroundColor: this.props.background ? this.props.background : '#4285F4',
-                    boxShadow: `rgba(0, 0, 0, 0.28) 0px ${this.state.boxShado}px 8px`
+                    boxShadow: `rgba(0, 0, 0, 0.28) 0px ${this.state.boxShado}px ${this.state.boxShado < 2.5 ? 0 : 8}px`
                 }}>
                     <div className="mdc-top-app-bar__row">
                         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" style={{paddingLeft: 20}}>

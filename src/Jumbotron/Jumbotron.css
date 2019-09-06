@@ -1,7 +1,10 @@
-@import "../globals/bootstrap.min.css";
-@import "../globals/style.css";
-
-
-.lead {
-    font-size: 18px
+.jumb-body {
+    box-sizing: border-box;
+    padding-top: 80px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }

@@ -1,24 +1,20 @@
 import React from 'react';
 import './Jumbotron.css';
 
- interface Props {
+export interface ComponentProps {
+    height: number
+    backgroundColor?: string
+    textColor?: string
+    children: any
 }
 
-export default class Jumbotron extends React.Component<Props, {}>{
+export type JumbotronProps = ComponentProps & React.HTMLAttributes<HTMLDivElement>
+
+export default class Jumbotron extends React.Component<JumbotronProps, {}>{
     render(){
         return (
-            <div className="jumbotron mb-0 bg-light">
-                <h1 className="display-4">Hello, world!</h1>
-                    <span className="lead">
-                        This is a simple hero unit,
-                        a simple jumbotron-style component for calling extra attention 
-                        to featured content or information.
-                    </span>
-                    <hr className="my-4"/>
-                    <span>It uses utility classes for typography and spacing to 
-                        space content out within the larger container.
-                    </span>
-                    <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <div className="jumb-body" style={{height: this.props.height, backgroundColor: this.props.backgroundColor ? this.props.backgroundColor : '#4285F4', paddingTop: 80, color: this.props.textColor ? this.props.textColor : 'white'}} {...this.props}>
+                {this.props.children}
             </div>
         );
     }

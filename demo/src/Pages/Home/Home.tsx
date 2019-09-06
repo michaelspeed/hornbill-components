@@ -2,34 +2,18 @@ import React from 'react'
 import '../../assets/css/page.min.css'
 import '../../assets/css/style.css'
 import Nav from "../../Components/Navigation/Nav";
+import {Heading, Jumbotron} from "../../../../src";
+import {SubTitle} from "../../../../src/Typography";
 
 export default class Home extends React.Component{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         return (
             <React.Fragment>
                 <Nav/>
-                <header className="header"
-                        style={{backgroundImage: 'linear-gradient(135deg, #f9f7ff 0%, #fff 50%, #f6f3ff 100%)'}}>
-                    <div className="container">
-                        <div className="row align-items-center">
-
-                            <div className="col-lg-6">
-                                <h1>Your Support Center</h1>
-                                <p className="lead mt-5 mb-8">Thinking about having an online documentation or support
-                                    system for your startup? TheDocs have everythings you need to develop your own help
-                                    center.</p>
-                                <p><a className="btn btn-lg btn-round btn-info"
-                                      href="https://themeforest.net/item/thedocs-online-documentation-template/13070884?license=regular&open_purchase_for_item_id=13070884&purchasable=source&ref=thethemeio"
-                                      target="_blank">Purchase Now</a></p>
-                            </div>
-
-                            <div className="col-lg-5 ml-auto d-none d-lg-block">
-                                <img src="assets/img/vector/1.png" alt="img"/>
-                            </div>
-
-                        </div>
-                    </div>
-                </header>
+                <Jumbotron height={450}>
+                    <Heading type={1} style={{color: 'white'}}>Hornbill</Heading>
+                    <SubTitle>The best payment gateway</SubTitle>
+                </Jumbotron>
 
 
 
