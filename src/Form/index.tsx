@@ -12,7 +12,7 @@ export interface ComponentProps {
 type HFormProps = ComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 class Form extends React.Component<HFormProps, {}>{
-   
+
     getBorderStye = () => {
         if(this.props.borderResult === 'success'){
             return 'has-success';
@@ -50,7 +50,6 @@ class Form extends React.Component<HFormProps, {}>{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const borderResult:string = this.getBorderStye();
         const formDetails:string = this.FormController();
-        const message:string  = this.getMessage();
         return(
             <div className={
                     clsx({

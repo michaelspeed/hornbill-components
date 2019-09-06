@@ -1,7 +1,5 @@
 import React from 'react'
 import Nav from "../../Components/Navigation/Nav";
-import {Button, Panel} from "../../../../src";
-import {Intent} from "../../../../src/globals/global";
 
 interface State {
     isOpen: boolean
@@ -64,14 +62,6 @@ export default class PanelDoc extends React.Component<{}, State>{
                                     <h1>Panel</h1>
 
                                     <hr className="my-2"/>
-
-                                    <div>
-                                        <Button intent={Intent.PRIMARY} onClick={() => this.setState({isOpen: true})}>Open Panel</Button>
-                                    </div>
-
-                                    <Panel isOpen={this.state.isOpen}>
-                                        <div>SOME</div>
-                                    </Panel>
 
                                     <h2 id="fontawesome">Props</h2>
                                     <hr className="my-2"/>

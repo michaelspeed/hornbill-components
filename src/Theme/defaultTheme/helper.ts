@@ -1,6 +1,6 @@
-import {Intent} from "../..";
 import {evergreen} from "../../Colors";
 import tinycolor from 'tinycolor2'
+import {Intent} from "../../globals/Intent";
 
 const linearGradient = (top, bottom) => {
     return `linear-gradient(to bottom, ${top}, ${bottom})`

@@ -1,7 +1,7 @@
 import React from 'react';
 import './progressbar.css';
 import clsx from 'clsx';
-import { Intent } from '../globals/global';
+import {Intent} from "../globals/Intent";
 
 export interface ComponentProps{
     intent?: Intent
@@ -10,7 +10,7 @@ export interface ComponentProps{
 
 export type HProgressBarProps = ComponentProps & React.HTMLAttributes<HTMLDivElement>
 
-export default class ProgressBar extends React.Component<HProgressBarProps, {}>{ 
+export default class ProgressBar extends React.Component<HProgressBarProps, {}>{
     getIntentProps(intent): string {
         if(intent === 'warning') {
             return 'hb-bg-warning';
@@ -43,7 +43,7 @@ export default class ProgressBar extends React.Component<HProgressBarProps, {}>{
         );
     }
 }
-{/* 
+{/*
                 <div className="progress mb-4" style={{height: "3px"}}>
                     <div className="progress-bar bg-warning" role="progressbar" style={{width: "15%"}}></div>
                 </div>

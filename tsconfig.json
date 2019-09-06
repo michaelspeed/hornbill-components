@@ -20,7 +20,9 @@
     "declaration": false,               // todo: make this true when all .js files have been converted to .ts/.tsx
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": [

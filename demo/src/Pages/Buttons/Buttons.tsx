@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from "../../Components/Navigation/Nav";
+import {Button} from "../../../../src";
 
 export default class Buttons extends React.Component{
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
@@ -41,11 +42,14 @@ export default class Buttons extends React.Component{
                                 </aside>
                             </div>
 
+
                             <div className="col-md-7 col-xl-8 ml-md-auto py-8">
                                 <article>
                                     <h1>Button</h1>
                                     <p className="lead">Different type of components and elements to display a code
                                         block.</p>
+
+                                    <Button></Button>
 
                                     <hr className="my-2"/>
 

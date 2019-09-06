@@ -1,7 +1,7 @@
 import React from 'react'
 import './RoundedButton.css'
 import clsx from 'clsx'
-import {Intent} from "../globals/global";
+import {Intent} from "../globals/Intent";
 
 interface Props {
     intent: Intent

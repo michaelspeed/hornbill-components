@@ -1,7 +1,7 @@
 import React from 'react'
 import './alert.css'
 import clsx from 'clsx'
-import {Intent} from "../globals/global";
+import {Intent} from "../globals/Intent";
 
 export interface ComponentProps {
     intent?: Intent
@@ -12,7 +12,7 @@ export interface ComponentProps {
 export type HAlertProps = ComponentProps & React.HTMLAttributes<HTMLDivElement>
 
 class Alert extends React.Component<HAlertProps, {}>{
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined 
+    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined
     {
         const {message, intent, title} = this.props;
         const bntIntent: string = this.getIntentProps(intent)
@@ -24,7 +24,7 @@ class Alert extends React.Component<HAlertProps, {}>{
                 },bntIntent)}
                  >
                  {title !== undefined ? title: ''}{message}
-            </div>  
+            </div>
         )
     }
 

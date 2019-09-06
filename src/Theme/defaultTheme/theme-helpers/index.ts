@@ -1,7 +1,7 @@
 import {colors, elevations} from "../foundational-styles";
 import themedProperty from "../utils/themedProperty";
-import {Intent} from "../../../globals/global";
 import {fontFamilies, headings, paragraph, text} from "../typography";
+import {Intent} from "../../../globals/Intent";
 
 const getBorderRadiusForControlHeight = height => {
     if (height <= 40) return 3

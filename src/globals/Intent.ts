@@ -6,3 +6,5 @@ export const Intent = {
     DANGER: "danger" as "danger",
     INFO: "info" as "info",
 };
+
+export type Intent = typeof Intent[keyof  typeof Intent]
